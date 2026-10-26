@@ -94,13 +94,9 @@ Created by **The Grid Optimists**:
 NeighbourhoodWatt began in **DECO3801 - Design Computing Studio 3: Build**
 at **The University of Queensland**, Semester 2, 2026. It was developed in
 response to **project brief 30, "Neighbourhood Watt: Collaborative Optimisation
-of Solar and Storage"**, in the *DECO3801/DECO7381 Project Briefs* document.
-This acknowledgement records the project's origins; it does not imply
-university endorsement.
-
-Thanks also to Pasindu Marasinghe ([mottretor](https://github.com/mottretor))
-for the original repository scaffolding. Robbie Crouch's original commits also
-appear under the name Francis Crouch.
+of Solar and Storage"**, from *DECO3801/DECO7381 Project Briefs*.
+The [project brief](PROJECT_BRIEF.pdf) is included in the repository root
+(pages 40-41 of the original document).
 
 This repository starts from a clean snapshot of the program. The original
 course repository retains the development history and assessment records.

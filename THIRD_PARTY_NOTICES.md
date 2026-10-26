@@ -6,6 +6,14 @@ to external software, downloaded data, or data-derived resources. Dependencies
 are installed separately through `environment.yml`; their upstream copyright
 and licence notices remain applicable.
 
+## Project brief
+
+`PROJECT_BRIEF.pdf` contains project brief 30, "Neighbourhood Watt: Collaborative
+Optimisation of Solar and Storage", from the University of Queensland's
+*DECO3801/DECO7381 Project Briefs* (original pages 40-41). It is reproduced as a
+reference document. Rights in the original brief remain with its authors;
+the project's GPL licence does not apply to this third-party document.
+
 ## User interface and solvers
 
 - **PyQt6**, by Riverbank Computing: the standard open-source distribution is
