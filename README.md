@@ -1,5 +1,7 @@
 # NeighbourhoodWatt
 
+> This repository preserves the completed 2026 university project and is not actively maintained.
+
 NeighbourhoodWatt is a desktop simulation and optimisation tool for exploring
 shared community batteries in residential neighbourhoods across Australia's
 National Electricity Market (NEM). It compares coordinated solar and battery
