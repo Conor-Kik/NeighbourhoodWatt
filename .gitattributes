@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Generated LightGBM weights are not useful as line-by-line diffs.
+src/database_v2/seed_data/lightgbm/**/*.txt.gz -diff linguist-generated=true

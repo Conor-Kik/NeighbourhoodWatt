@@ -1,0 +1,46 @@
+name: neighbourhoodwatt
+channels:
+- conda-forge
+- nodefaults
+dependencies:
+- python =3.12
+- cfgrib >=0.9.15.1
+- lightgbm >=4.6,<5
+- pyqt6 >=6.11.0
+- scikit-learn >=1.3.0
+- pandas >=2.0.0
+- xarray >=2023.7.0
+- matplotlib >=3.11.1
+- platformdirs >= 4.12.4
+- pvlib-python >=0.11.0
+- pyomo >=6.10.1
+- pydantic >=2.13.4
+- typer >=0.27.2
+- pybind11 >=3.1.0
+- timezonefinder >=8.3.0
+- requests-cache >=1.3.3
+- kmedoids >=0.5.5
+- pip
+- python-flatbuffers =25.9.23
+- pytest
+- pytest-cov
+- pre-commit
+- ruff
+- mypy
+- pandas-stubs
+- types-requests
+- pip:
+  - "australian-postcodes @ git+https://github.com/schappim/australian-postcodes.git@7874021a281bad87d8cd234a7d8f82d18f279fcc#subdirectory=libraries/python"
+  - tzdata
+  - -e .
+  - dynamical-catalog>=0.8.0
+  - ecmwf-opendata>=0.3.34
+  - nemosis>=3.8.1
+  - openmeteo-requests>=1.7.5
+  - retry-requests>=2.0.0
+  - highspy>=1.15.1
+  - ckanapi>=4.11
+  - polyfactory>=3.3.0
+  - PyQt6-stubs>=20250824
+  - pyinstaller==6.22.3
+  - pytest-qt>=4.5.0

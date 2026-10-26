@@ -1,0 +1,1626 @@
+{
+  "metadata": {
+    "name": "Representative NEM capital-city network-use-of-system tariffs",
+    "coverage_start": "2024-04-02",
+    "coverage_end": "2027-06-30",
+    "currency": "AUD",
+    "rate_basis": "ex_GST",
+    "customer_class": "low_voltage_small_business",
+    "scope": "network_use_of_system_charges",
+    "description": "Representative low-voltage small-business NUOS tariffs for selected NEM capital-city network areas. NUOS rates include distribution, transmission and jurisdictional-scheme components published by each distributor; they are not a complete landed electricity cost for a community developer.",
+    "usage": {
+      "import_variable_price": "Add the applicable import network energy rate to the AEMO spot energy price.",
+      "fixed_charges": "Daily fixed charges are reference data only and are not included in the optimiser's interval energy prices.",
+      "export": "Export rewards are applied by time. Allowance- or threshold-based export charges require billing-period state and are not applied by the current interval tariff reader."
+    },
+    "model_limitations": [
+      "The selected tariff is a representative low-voltage small-business tariff, not a site-specific quote or retail contract.",
+      "A multi-dwelling community may instead be assigned an embedded-network, demand or larger-customer tariff according to annual consumption, connection capacity, voltage and NMI arrangement.",
+      "AEMO regional reference prices are not adjusted for marginal or distribution loss factors.",
+      "Daily fixed charges and conditional export allowances are not included in optimiser interval costs.",
+      "The current tariff reader interprets working weekdays as Monday-Friday and does not exclude public holidays."
+    ],
+    "excluded_components": [
+      "AEMO spot energy price",
+      "retailer subscription charges",
+      "retailer market and hedging charges",
+      "AEMO market participant and ancillary-service fees",
+      "energy losses and loss-factor adjustments",
+      "prudential, settlement and financing costs",
+      "environmental certificate charges",
+      "GreenPower charges",
+      "competitive metering charges unless explicitly identified in a tariff row",
+      "GST"
+    ],
+    "quality_levels": {
+      "official": "Published network tariff values or schedules.",
+      "official_indicative": "Published indicative values from an official tariff-structure document.",
+      "secondary_transcription": "Contemporaneous transcription linked to published network pricing material.",
+      "estimated": "Representative value derived from an adjacent published tariff year while preserving the selected tariff structure."
+    },
+    "contains_null_values": false
+  },
+  "cities": {
+    "brisbane": {
+      "state": "QLD",
+      "nem_region": "QLD1",
+      "timezone": "Australia/Brisbane",
+      "network": "Energex",
+      "selected_tariff": "NTC6800",
+      "tariff_name": "Small Business TOU Energy",
+      "tariffs_by_financial_year": {
+        "2023-24": {
+          "effective_from": "2023-07-01",
+          "effective_to": "2024-06-30",
+          "tariff_code": "NTC6800",
+          "tariff_name": "Small Business TOU Energy",
+          "fixed_charges": {
+            "network_c_per_day": 189.8,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 189.8,
+            "total_aud_per_day": 1.898,
+            "selection_basis": "Published >80 MWh annual-consumption fixed band, used as the representative band for an aggregated community connection."
+          },
+          "import_energy_rates": [
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.838,
+              "aud_per_kwh": 0.07838,
+              "time": "00:00-09:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 2.748,
+              "aud_per_kwh": 0.02748,
+              "time": "09:00-16:00",
+              "days": "daily"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.838,
+              "aud_per_kwh": 0.07838,
+              "time": "21:00-24:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "peak",
+              "c_per_kwh": 18.131,
+              "aud_per_kwh": 0.18131,
+              "time": "16:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.838,
+              "aud_per_kwh": 0.07838,
+              "time": "00:00-09:00 and 16:00-24:00",
+              "days": "Saturday-Sunday"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Energex",
+              "document": "Network Price List 2023-24",
+              "url": "https://www.aer.gov.au/industry/networks/pricing-proposals/energex-annual-pricing-2023-24"
+            }
+          ]
+        },
+        "2024-25": {
+          "effective_from": "2024-07-01",
+          "effective_to": "2025-06-30",
+          "tariff_code": "NTC6800",
+          "tariff_name": "Small Business TOU Energy",
+          "fixed_charges": {
+            "network_c_per_day": 164.7,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 164.7,
+            "total_aud_per_day": 1.647,
+            "selection_basis": "Published highest annual-consumption fixed band, used as the representative band for an aggregated community connection."
+          },
+          "import_energy_rates": [
+            {
+              "band": "shoulder",
+              "c_per_kwh": 14.097,
+              "aud_per_kwh": 0.14097,
+              "time": "00:00-09:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 4.356,
+              "aud_per_kwh": 0.04356,
+              "time": "09:00-16:00",
+              "days": "daily"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 14.097,
+              "aud_per_kwh": 0.14097,
+              "time": "21:00-24:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "peak",
+              "c_per_kwh": 19.219,
+              "aud_per_kwh": 0.19219,
+              "time": "16:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 14.097,
+              "aud_per_kwh": 0.14097,
+              "time": "00:00-09:00 and 16:00-24:00",
+              "days": "Saturday-Sunday"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Energex",
+              "document": "Network Price List 2024-25",
+              "url": "https://www.aer.gov.au/industry/networks/pricing-proposals/energex-2024-25-pricing-proposal/decision"
+            }
+          ]
+        },
+        "2025-26": {
+          "effective_from": "2025-07-01",
+          "effective_to": "2026-06-30",
+          "tariff_code": "NTC6800",
+          "tariff_name": "Small Business TOU Energy",
+          "fixed_charges": {
+            "network_c_per_day": 97.7,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 97.7,
+            "total_aud_per_day": 0.977
+          },
+          "import_energy_rates": [
+            {
+              "band": "shoulder",
+              "c_per_kwh": 6.998,
+              "aud_per_kwh": 0.06998,
+              "time": "00:00-11:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 0.476,
+              "aud_per_kwh": 0.00476,
+              "time": "11:00-13:00",
+              "days": "daily"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 6.998,
+              "aud_per_kwh": 0.06998,
+              "time": "13:00-17:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "peak",
+              "c_per_kwh": 25.065,
+              "aud_per_kwh": 0.25065,
+              "time": "17:00-20:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 6.998,
+              "aud_per_kwh": 0.06998,
+              "time": "20:00-24:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 6.998,
+              "aud_per_kwh": 0.06998,
+              "time": "00:00-11:00 and 13:00-24:00",
+              "days": "Saturday-Sunday"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Energex",
+              "document": "Network Price List 2025-26",
+              "url": "https://www.aer.gov.au/industry/networks/pricing-proposals/energex-2025-26-pricing-proposal/decision"
+            }
+          ]
+        },
+        "2026-27": {
+          "effective_from": "2026-07-01",
+          "effective_to": "2027-06-30",
+          "tariff_code": "NTC6800",
+          "tariff_name": "Small Business TOU Energy",
+          "fixed_charges": {
+            "network_c_per_day": 122.1,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 122.1,
+            "total_aud_per_day": 1.221
+          },
+          "import_energy_rates": [
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.695,
+              "aud_per_kwh": 0.07695,
+              "time": "00:00-11:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 1.627,
+              "aud_per_kwh": 0.01627,
+              "time": "11:00-13:00",
+              "days": "daily"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.695,
+              "aud_per_kwh": 0.07695,
+              "time": "13:00-17:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "peak",
+              "c_per_kwh": 26.318,
+              "aud_per_kwh": 0.26318,
+              "time": "17:00-20:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.695,
+              "aud_per_kwh": 0.07695,
+              "time": "20:00-24:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 7.695,
+              "aud_per_kwh": 0.07695,
+              "time": "00:00-11:00 and 13:00-24:00",
+              "days": "Saturday-Sunday"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Energex",
+              "document": "Network pricing and tariffs",
+              "url": "https://www.energex.com.au/our-network/network-pricing-and-tariffs"
+            }
+          ]
+        }
+      }
+    },
+    "sydney": {
+      "state": "NSW",
+      "nem_region": "NSW1",
+      "timezone": "Australia/Sydney",
+      "network": "Ausgrid",
+      "selected_tariff": "EA225",
+      "tariff_name": "Small Business Time of Use",
+      "tariffs_by_financial_year": {
+        "2023-24": {
+          "effective_from": "2023-07-01",
+          "effective_to": "2024-06-30",
+          "tariff_code": "EA225",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 180.094,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 180.094,
+            "total_aud_per_day": 1.80094
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 28.04,
+              "aud_per_kwh": 0.2804,
+              "time": "07:00-09:00 and 17:00-20:00",
+              "days": "working weekdays"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 6.59,
+              "aud_per_kwh": 0.0659,
+              "time": "09:00-17:00 and 20:00-22:00",
+              "days": "working weekdays"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 3.25,
+              "aud_per_kwh": 0.0325,
+              "time": "22:00-07:00",
+              "days": "working weekdays"
+            },
+            {
+            "band": "off_peak",
+            "c_per_kwh": 3.25,
+            "aud_per_kwh": 0.0325,
+            "time": "all times",
+            "days": "Saturday-Sunday"
+          }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "secondary_transcription",
+          "estimated": true,
+          "estimate_method": "Published historical energy rates retained; daily fixed charge estimated from adjacent EA225 years.",
+          "sources": [
+            {
+              "provider": "Ausgrid / AER",
+              "document": "Ausgrid annual pricing 2023-24",
+              "url": "https://www.aer.gov.au/industry/networks/pricing-proposals/ausgrid-annual-pricing-2023-24"
+            }
+          ]
+        },
+        "2024-25": {
+          "effective_from": "2024-07-01",
+          "effective_to": "2025-06-30",
+          "tariff_code": "EA225",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 174.03101914426978,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 174.03101914426978,
+            "total_aud_per_day": 1.7403101914426978
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 33.01296260355713,
+              "aud_per_kwh": 0.3301296260355713,
+              "time": "15:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "June",
+                "July",
+                "August",
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.250713250210584,
+              "aud_per_kwh": 0.05250713250210584,
+              "time": "all other times",
+              "days": "all days",
+              "months": [
+                "June",
+                "July",
+                "August",
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.250713250210584,
+              "aud_per_kwh": 0.05250713250210584,
+              "time": "all times",
+              "days": "all days",
+              "months": [
+                "April",
+                "May",
+                "September",
+                "October"
+              ]
+            }
+          ],
+          "export_network_tariff": {
+            "available": true,
+            "default_assignment": false,
+            "tariff_code": "EA029",
+            "midday_window": "10:00-15:00",
+            "evening_reward_window": "16:00-21:00",
+            "free_export_kwh_per_day": 6.85,
+            "export_charge_c_per_kwh": 1.2028644003142666,
+            "export_charge_aud_per_kwh": 0.012028644003142666,
+            "export_reward_c_per_kwh": 2.395052185656042,
+            "export_reward_aud_per_kwh": 0.02395052185656042,
+            "quality": "official"
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Ausgrid",
+              "document": "Revised Network Price List 2024-25",
+              "url": "https://www.aer.gov.au/industry/networks/pricing-proposals/ausgrid-2024-25-pricing-proposal/decision"
+            }
+          ]
+        },
+        "2025-26": {
+          "effective_from": "2025-07-01",
+          "effective_to": "2026-06-30",
+          "tariff_code": "EA225",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 194.78936859755206,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 194.78936859755206,
+            "total_aud_per_day": 1.9478936859755207
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 34.89208687021483,
+              "aud_per_kwh": 0.3489208687021483,
+              "time": "15:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "June",
+                "July",
+                "August",
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.7619383895375815,
+              "aud_per_kwh": 0.05761938389537582,
+              "time": "all other times",
+              "days": "all days",
+              "months": [
+                "June",
+                "July",
+                "August",
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.7619383895375815,
+              "aud_per_kwh": 0.05761938389537582,
+              "time": "all times",
+              "days": "all days",
+              "months": [
+                "April",
+                "May",
+                "September",
+                "October"
+              ]
+            }
+          ],
+          "export_network_tariff": {
+            "available": true,
+            "default_assignment": true,
+            "tariff_code": "EA029",
+            "midday_window": "10:00-15:00",
+            "evening_reward_window": "16:00-21:00",
+            "free_export_kwh_per_day": 6.85,
+            "export_charge_c_per_kwh": 1.232,
+            "export_charge_aud_per_kwh": 0.01232,
+            "export_reward_c_per_kwh": 3.8551,
+            "export_reward_aud_per_kwh": 0.038551,
+            "quality": "official"
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Ausgrid",
+              "document": "Network Price List 2025-26",
+              "url": "https://www.ausgrid.com.au/about-us/regulation-and-compliance/network-prices"
+            }
+          ]
+        },
+        "2026-27": {
+          "effective_from": "2026-07-01",
+          "effective_to": "2027-06-30",
+          "tariff_code": "EA225",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 218.64716683919778,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 218.64716683919778,
+            "total_aud_per_day": 2.1864716683919776
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 39.75696593853578,
+              "aud_per_kwh": 0.3975696593853578,
+              "time": "15:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "June",
+                "July",
+                "August",
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.899677049276812,
+              "aud_per_kwh": 0.05899677049276812,
+              "time": "all other times",
+              "days": "all days",
+              "months": [
+                "June",
+                "July",
+                "August",
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.899677049276812,
+              "aud_per_kwh": 0.05899677049276812,
+              "time": "all times",
+              "days": "all days",
+              "months": [
+                "April",
+                "May",
+                "September",
+                "October"
+              ]
+            }
+          ],
+          "export_network_tariff": {
+            "available": true,
+            "default_assignment": true,
+            "tariff_code": "EA029",
+            "midday_window": "10:00-15:00",
+            "evening_reward_window": "16:00-21:00",
+            "free_export_kwh_per_day": 6.85,
+            "export_charge_c_per_kwh": 1.232,
+            "export_charge_aud_per_kwh": 0.01232,
+            "export_reward_c_per_kwh": 3.8551,
+            "export_reward_aud_per_kwh": 0.038551,
+            "quality": "official"
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Ausgrid",
+              "document": "Network Price List 2026-27",
+              "url": "https://www.ausgrid.com.au/about-us/regulation-and-compliance/network-prices"
+            }
+          ]
+        }
+      }
+    },
+    "melbourne": {
+      "state": "VIC",
+      "nem_region": "VIC1",
+      "timezone": "Australia/Melbourne",
+      "network": "CitiPower",
+      "selected_tariff": "CGTOU",
+      "tariff_name": "General Time of Use",
+      "tariffs_by_financial_year": {
+        "2023-24": {
+          "effective_from": "2023-07-01",
+          "effective_to": "2024-06-30",
+          "tariff_code": "CGTOU",
+          "tariff_name": "General Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 41.1,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 41.1,
+            "total_aud_per_day": 0.411
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 13.27,
+              "aud_per_kwh": 0.1327,
+              "time": "09:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 2.95,
+              "aud_per_kwh": 0.0295,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "CitiPower",
+              "document": "CitiPower 2023-24 Pricing",
+              "url": "https://www.citipower.com.au/help-support/electricity-retailer-resources"
+            }
+          ]
+        },
+        "2024-25": {
+          "effective_from": "2024-07-01",
+          "effective_to": "2025-06-30",
+          "tariff_code": "CGTOU",
+          "tariff_name": "General Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 42.46,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 42.46,
+            "total_aud_per_day": 0.4246
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 14.25,
+              "aud_per_kwh": 0.1425,
+              "time": "09:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 3.16,
+              "aud_per_kwh": 0.0316,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "CitiPower",
+              "document": "CitiPower 2024-25 Pricing",
+              "url": "https://www.aer.gov.au/system/files/2024-06/CitiPower%20-%202024-25%20Pricing%20-%20June%202024.pdf"
+            }
+          ]
+        },
+        "2025-26": {
+          "effective_from": "2025-07-01",
+          "effective_to": "2026-06-30",
+          "tariff_code": "CGTOU",
+          "tariff_name": "General Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 46.58,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 46.58,
+            "total_aud_per_day": 0.4658
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 15.08,
+              "aud_per_kwh": 0.1508,
+              "time": "09:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 3.35,
+              "aud_per_kwh": 0.0335,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "CitiPower",
+              "document": "CitiPower 2025-26 Pricing",
+              "url": "https://www.aer.gov.au/system/files/2025-04/CitiPower%202025-26%20-%20Final%20-%20Pricing%20-%2031%20March%202025.pdf"
+            }
+          ]
+        },
+        "2026-27": {
+          "effective_from": "2026-07-01",
+          "effective_to": "2027-06-30",
+          "tariff_code": "CGTOU",
+          "tariff_name": "General Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 58.32,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 58.32,
+            "total_aud_per_day": 0.5832
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 15.39,
+              "aud_per_kwh": 0.1539,
+              "time": "09:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 3.84,
+              "aud_per_kwh": 0.0384,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "CitiPower",
+              "document": "CitiPower 2026-27 Pricing",
+              "url": "https://www.citipower.com.au/news-and-media/blog/pricing"
+            }
+          ]
+        }
+      }
+    },
+    "adelaide": {
+      "state": "SA",
+      "nem_region": "SA1",
+      "timezone": "Australia/Adelaide",
+      "network": "SA Power Networks",
+      "selected_tariff": "SBTOU",
+      "tariff_name": "Small Business Time of Use",
+      "tariffs_by_financial_year": {
+        "2023-24": {
+          "effective_from": "2023-07-01",
+          "effective_to": "2024-06-30",
+          "tariff_code": "SBTOU",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 66.94,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 66.94,
+            "total_aud_per_day": 0.6694
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 23.45,
+              "aud_per_kwh": 0.2345,
+              "time": "17:00-21:00",
+              "days": "all days",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 16.32,
+              "aud_per_kwh": 0.1632,
+              "time": "07:00-17:00",
+              "days": "working weekdays",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 16.32,
+              "aud_per_kwh": 0.1632,
+              "time": "07:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 8.82,
+              "aud_per_kwh": 0.0882,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "SA Power Networks",
+              "document": "Annual Pricing Proposal 2023-24",
+              "url": "https://www.aer.gov.au/system/files/SA%20Power%20Networks%202023-24%20-%20Annual%20Pricing%20Proposal%20Revised%20-%2020230508%20-%20PUBLIC.pdf"
+            }
+          ]
+        },
+        "2024-25": {
+          "effective_from": "2024-07-01",
+          "effective_to": "2025-06-30",
+          "tariff_code": "SBTOU",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 72.59,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 72.59,
+            "total_aud_per_day": 0.7259
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 25.68,
+              "aud_per_kwh": 0.2568,
+              "time": "17:00-21:00",
+              "days": "all days",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 17.9,
+              "aud_per_kwh": 0.179,
+              "time": "07:00-17:00",
+              "days": "working weekdays",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 17.9,
+              "aud_per_kwh": 0.179,
+              "time": "07:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 9.69,
+              "aud_per_kwh": 0.0969,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "SA Power Networks",
+              "document": "Annual Pricing Proposal 2024-25",
+              "url": "https://www.aer.gov.au/system/files/2024-07/SA%20Power%20Networks%20-%20Annual%20Pricing%20Proposal%20-%2019%20April%202024.pdf"
+            }
+          ]
+        },
+        "2025-26": {
+          "effective_from": "2025-07-01",
+          "effective_to": "2026-06-30",
+          "tariff_code": "SBTOU",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 63.62417793759182,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 63.62417793759182,
+            "total_aud_per_day": 0.6362417793759182
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 27.5,
+              "aud_per_kwh": 0.275,
+              "time": "17:00-21:00",
+              "days": "all days",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 19.14,
+              "aud_per_kwh": 0.1914,
+              "time": "07:00-17:00",
+              "days": "working weekdays",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 19.14,
+              "aud_per_kwh": 0.1914,
+              "time": "07:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 10.34,
+              "aud_per_kwh": 0.1034,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": true,
+            "charged_window": "10:00-16:00",
+            "free_export_kwh_per_day": 9,
+            "export_charge_c_per_kwh": 1.0,
+            "export_charge_aud_per_kwh": 0.01,
+            "free_export_window": "16:00-10:00",
+            "applies_if_export_capacity_kw_ac_lte": 30,
+            "quality": "official"
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "SA Power Networks",
+              "document": "Tariff Price List 2025-26",
+              "url": "https://www.sapowernetworks.com.au/data/322656/annual-pricing-proposal-overview/"
+            }
+          ]
+        },
+        "2026-27": {
+          "effective_from": "2026-07-01",
+          "effective_to": "2027-06-30",
+          "tariff_code": "SBTOU",
+          "tariff_name": "Small Business Time of Use",
+          "fixed_charges": {
+            "network_c_per_day": 66.4535147149754,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 66.4535147149754,
+            "total_aud_per_day": 0.664535147149754
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 28.72,
+              "aud_per_kwh": 0.2872,
+              "time": "17:00-21:00",
+              "days": "all days",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 19.98,
+              "aud_per_kwh": 0.1998,
+              "time": "07:00-17:00",
+              "days": "working weekdays",
+              "months": [
+                "November",
+                "December",
+                "January",
+                "February",
+                "March"
+              ]
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 19.98,
+              "aud_per_kwh": 0.1998,
+              "time": "07:00-21:00",
+              "days": "working weekdays",
+              "months": [
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October"
+              ]
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 10.79,
+              "aud_per_kwh": 0.1079,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": true,
+            "charged_window": "10:00-16:00",
+            "free_export_kwh_per_day": 9,
+            "export_charge_c_per_kwh": 1.0,
+            "export_charge_aud_per_kwh": 0.01,
+            "free_export_window": "16:00-10:00",
+            "applies_if_export_capacity_kw_ac_lte": 30,
+            "quality": "official"
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "SA Power Networks",
+              "document": "Tariff Price List 2026-27",
+              "url": "https://www.sapowernetworks.com.au/data/322656/annual-pricing-proposal-overview/"
+            }
+          ]
+        }
+      }
+    },
+    "canberra": {
+      "state": "ACT",
+      "nem_region": "NSW1",
+      "timezone": "Australia/Sydney",
+      "network": "Evoenergy",
+      "selected_tariff": "090",
+      "tariff_name": "General TOU Network",
+      "tariffs_by_financial_year": {
+        "2023-24": {
+          "effective_from": "2023-07-01",
+          "effective_to": "2024-06-30",
+          "tariff_code": "090",
+          "tariff_name": "General TOU Network",
+          "fixed_charges": {
+            "network_c_per_day": 53.238,
+            "metering_c_per_day": 26.98,
+            "total_c_per_day": 80.218,
+            "total_aud_per_day": 0.80218
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 13.72,
+              "aud_per_kwh": 0.1372,
+              "time": "07:00-17:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 5.415,
+              "aud_per_kwh": 0.05415,
+              "time": "17:00-22:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 1.205,
+              "aud_per_kwh": 0.01205,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Evoenergy",
+              "document": "Schedule of electricity network charges 2023-24",
+              "url": "https://www.evoenergy.com.au/Your-Energy/Pricing-and-tariffs/Electricity-network-pricing"
+            }
+          ]
+        },
+        "2024-25": {
+          "effective_from": "2024-07-01",
+          "effective_to": "2025-06-30",
+          "tariff_code": "090",
+          "tariff_name": "General TOU Network",
+          "fixed_charges": {
+            "network_c_per_day": 61.176,
+            "metering_c_per_day": 15.5,
+            "total_c_per_day": 76.676,
+            "total_aud_per_day": 0.76676
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 17.518,
+              "aud_per_kwh": 0.17518,
+              "time": "07:00-17:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 10.99,
+              "aud_per_kwh": 0.1099,
+              "time": "17:00-22:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 5.11,
+              "aud_per_kwh": 0.0511,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Evoenergy",
+              "document": "Schedule of electricity network charges 2024-25",
+              "url": "https://www.evoenergy.com.au/Your-Energy/Pricing-and-tariffs/Electricity-network-pricing"
+            }
+          ]
+        },
+        "2025-26": {
+          "effective_from": "2025-07-01",
+          "effective_to": "2026-06-30",
+          "tariff_code": "090",
+          "tariff_name": "General TOU Network",
+          "fixed_charges": {
+            "network_c_per_day": 65.335,
+            "metering_c_per_day": 16.77,
+            "total_c_per_day": 82.105,
+            "total_aud_per_day": 0.82105
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 19.4,
+              "aud_per_kwh": 0.194,
+              "time": "07:00-17:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 13.786,
+              "aud_per_kwh": 0.13786,
+              "time": "17:00-22:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 7.105,
+              "aud_per_kwh": 0.07105,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Evoenergy",
+              "document": "Schedule of electricity network charges 2025-26",
+              "url": "https://www.evoenergy.com.au/Your-Energy/Pricing-and-tariffs/Electricity-network-pricing"
+            }
+          ]
+        },
+        "2026-27": {
+          "effective_from": "2026-07-01",
+          "effective_to": "2027-06-30",
+          "tariff_code": "090",
+          "tariff_name": "General TOU Network",
+          "fixed_charges": {
+            "network_c_per_day": 73.453,
+            "metering_c_per_day": 18.36,
+            "total_c_per_day": 91.813,
+            "total_aud_per_day": 0.91813
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 22.955,
+              "aud_per_kwh": 0.22955,
+              "time": "07:00-17:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 16.031,
+              "aud_per_kwh": 0.16031,
+              "time": "17:00-22:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 8.91,
+              "aud_per_kwh": 0.0891,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "Evoenergy",
+              "document": "Schedule of electricity network charges 2026-27",
+              "url": "https://www.evoenergy.com.au/Your-Energy/Pricing-and-tariffs/Electricity-network-pricing"
+            }
+          ]
+        }
+      }
+    },
+    "hobart": {
+      "state": "TAS",
+      "nem_region": "TAS1",
+      "timezone": "Australia/Hobart",
+      "network": "TasNetworks",
+      "selected_tariff": "TAS94",
+      "tariff_name": "Small Business Low Voltage Time of Use Consumption",
+      "tariffs_by_financial_year": {
+        "2023-24": {
+          "effective_from": "2023-07-01",
+          "effective_to": "2024-06-30",
+          "tariff_code": "TAS94",
+          "tariff_name": "Small Business Low Voltage Time of Use Consumption",
+          "fixed_charges": {
+            "network_c_per_day": 73.815,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 73.815,
+            "total_aud_per_day": 0.73815
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 10.84,
+              "aud_per_kwh": 0.1084,
+              "time": "07:00-22:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 6.504,
+              "aud_per_kwh": 0.06504,
+              "time": "07:00-22:00",
+              "days": "Saturday-Sunday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 1.626,
+              "aud_per_kwh": 0.01626,
+              "time": "22:00-07:00",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "TasNetworks",
+              "document": "Distribution prices 2023-24",
+              "url": "https://www.tasnetworks.com.au/poles-and-wires/pricing/regulated-distribution-pricing/distribution-prices"
+            }
+          ]
+        },
+        "2024-25": {
+          "effective_from": "2024-07-01",
+          "effective_to": "2025-06-30",
+          "tariff_code": "TAS94",
+          "tariff_name": "Small Business Low Voltage Time of Use Consumption",
+          "fixed_charges": {
+            "network_c_per_day": 83.78,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 83.78,
+            "total_aud_per_day": 0.8378
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 16.784,
+              "aud_per_kwh": 0.16784,
+              "time": "07:00-10:00 and 16:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 9.886,
+              "aud_per_kwh": 0.09886,
+              "time": "10:00-16:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 2.426,
+              "aud_per_kwh": 0.02426,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "TasNetworks",
+              "document": "Distribution prices 2024-25",
+              "url": "https://www.tasnetworks.com.au/poles-and-wires/pricing/regulated-distribution-pricing/distribution-prices"
+            }
+          ]
+        },
+        "2025-26": {
+          "effective_from": "2025-07-01",
+          "effective_to": "2026-06-30",
+          "tariff_code": "TAS94",
+          "tariff_name": "Small Business Low Voltage Time of Use Consumption",
+          "fixed_charges": {
+            "network_c_per_day": 90.901,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 90.901,
+            "total_aud_per_day": 0.90901
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 18.365,
+              "aud_per_kwh": 0.18365,
+              "time": "07:00-10:00 and 16:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 10.818,
+              "aud_per_kwh": 0.10818,
+              "time": "10:00-16:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 2.655,
+              "aud_per_kwh": 0.02655,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "TasNetworks",
+              "document": "Distribution prices 2025-26",
+              "url": "https://www.tasnetworks.com.au/poles-and-wires/pricing/regulated-distribution-pricing/distribution-prices"
+            }
+          ]
+        },
+        "2026-27": {
+          "effective_from": "2026-07-01",
+          "effective_to": "2027-06-30",
+          "tariff_code": "TAS94",
+          "tariff_name": "Small Business Low Voltage Time of Use Consumption",
+          "fixed_charges": {
+            "network_c_per_day": 96.355,
+            "metering_c_per_day": 0.0,
+            "total_c_per_day": 96.355,
+            "total_aud_per_day": 0.96355
+          },
+          "import_energy_rates": [
+            {
+              "band": "peak",
+              "c_per_kwh": 19.766,
+              "aud_per_kwh": 0.19766,
+              "time": "07:00-10:00 and 16:00-21:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "shoulder",
+              "c_per_kwh": 11.643,
+              "aud_per_kwh": 0.11643,
+              "time": "10:00-16:00",
+              "days": "Monday-Friday"
+            },
+            {
+              "band": "off_peak",
+              "c_per_kwh": 2.67,
+              "aud_per_kwh": 0.0267,
+              "time": "all other times",
+              "days": "all days"
+            }
+          ],
+          "export_network_tariff": {
+            "available": false,
+            "export_charge_c_per_kwh": 0.0,
+            "export_charge_aud_per_kwh": 0.0,
+            "export_reward_c_per_kwh": 0.0,
+            "export_reward_aud_per_kwh": 0.0
+          },
+          "quality": "official",
+          "estimated": false,
+          "estimate_method": "none",
+          "sources": [
+            {
+              "provider": "TasNetworks",
+              "document": "Distribution prices 2026-27",
+              "url": "https://www.tasnetworks.com.au/poles-and-wires/pricing/regulated-distribution-pricing/distribution-prices"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+-- Need to research a few examples
+INSERT OR IGNORE INTO house_config (
+    house_config_id,
+    pv_peak_capacity,
+    panel_tilt,
+    panel_azimuth,
+    pv_inverter_ac_kw,
+    pv_inverter_efficiency,
+    has_aircon,
+    has_poolpump,
+    has_ev
+) VALUES
+(
+    'house-1--6.6KW-5KW-INV',
+    6.6,
+    40,
+    57,
+    5.0,
+    0.966,
+    false,
+    false,
+    false
+),
+(
+    'house-2--6.6KW-5KW-INV',
+    6.6,
+    27,
+    258,
+    5.0,
+    0.961,
+    true,
+    false,
+    true
+),
+(
+    'house-3--6.6KW-5KW-INV',
+    6.6,
+    37,
+    44,
+    5.0,
+    0.971,
+    false,
+    true,
+    true
+),
+(
+    'house-4--10KW-8KW-INV',
+    10.0,
+    20,
+    140,
+    8.0,
+    0.963,
+    true,
+    true,
+    false
+),
+(
+    'house-5--10KW-8KW-INV',
+    10.0,
+    38,
+    216,
+    8.0,
+    0.967,
+    false,
+    false,
+    true
+),
+(
+    'house-6--10KW-8KW-INV',
+    10.0,
+    39,
+    13,
+    8.0,
+    0.969,
+    true,
+    false,
+    false
+),
+(
+    'house-7--13KW-10KW-INV',
+    13.0,
+    27,
+    114,
+    10.0,
+    0.973,
+    false,
+    true,
+    true
+),
+(
+    'house-8--13KW-10KW-INV',
+    13.0,
+    21,
+    15,
+    10.0,
+    0.961,
+    true,
+    true,
+    true
+),
+(
+    'house-9--20KW-15KW-INV',
+    20.0,
+    24,
+    52,
+    15.0,
+    0.961,
+    false,
+    true,
+    true
+),
+(
+    'house-10--20KW-15KW-INV',
+    20.0,
+    22,
+    111,
+    15.0,
+    0.97,
+    false,
+    true,
+    false
+);

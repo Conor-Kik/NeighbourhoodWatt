@@ -1,0 +1,46 @@
+# Environments and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.lic
+.venv/
+venv/
+node_modules/
+vendor/
+
+# Python and development caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.pytest-report*/
+.ruff_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+coverage.xml
+.cache/
+
+# Local data, training, results, and build output
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.log
+/model_training/
+/output/
+/tmp/
+/dist/
+/out/
+/build/*/
+/Miniforge*.sh
+/Miniforge*.exe
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

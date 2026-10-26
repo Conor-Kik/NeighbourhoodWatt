@@ -1,0 +1,104 @@
+-- Indicative battery replacement allowances for degradation modelling, not
+-- full installed system costs. Assumed rates: A$300/kWh for 257-514 kWh,
+-- A$225/kWh for about 4 MWh, and A$200/kWh for 10 MWh batteries.
+-- These allow for replacement work above the battery pack price but exclude
+-- replacing site infrastructure and grid connection.
+INSERT OR IGNORE INTO battery_config (
+    battery_config_id,
+    capacity_kwh,
+    max_power_kw,
+    efficiency,
+    min_soc_frac,
+    max_soc_frac,
+    replacement_cost_aud,
+    lifetime_cycles,
+    max_cycles_24h
+) VALUES
+(
+    'sungrow-ps255cs-2h',
+    257,
+    125,
+    0.9,
+    0.05,
+    0.95,
+    77100.0,
+    6000,
+    2.0
+),
+(
+    'sungrow-ps255cs-4h',
+    514,
+    125,
+    0.9,
+    0.05,
+    0.95,
+    154200.0,
+    6000,
+    1.0
+),
+(
+    'tesla-mp2x1-2h',
+    3854,
+    1927,
+    0.917,
+    0,
+    1,
+    867150.0,
+    6000,
+    2.0
+),
+(
+    'tesla-mp2x1-4h',
+    3916,
+    979,
+    0.937,
+    0,
+    1,
+    881100.0,
+    6000,
+    1.0
+),
+(
+    'tesla-mp2x1-4h-c012',
+    4300,
+    1075,
+    0.919,
+    0,
+    1,
+    967500.0,
+    6000,
+    1.0
+),
+(
+    'suburban-400kwh',
+    400,
+    200,
+    0.88,
+    0.1,
+    0.99,
+    120000.0,
+    6000,
+    2.0
+),
+(
+    'suburban-450kwh',
+    450,
+    225,
+    0.88,
+    0.1,
+    0.9,
+    135000.0,
+    6000,
+    2.0
+),
+(
+    'regional-5mw',
+    10000,
+    5000,
+    0.9,
+    0.05,
+    0.95,
+    2000000.0,
+    6000,
+    2.0
+)

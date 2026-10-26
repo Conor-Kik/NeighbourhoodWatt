@@ -1,0 +1,290 @@
+/* style.qss
+   Qt stylesheet for the whole app, applied once in main.py. Colours match
+   THEME in theme.py, which matplotlib uses. */
+
+QMainWindow {
+    background: #111111; /* canvas */
+}
+
+QWidget {
+    font-size: 10pt;
+    font-family: "Roboto";
+}
+
+#panel {
+    background: #1c1c1c; /* panel */
+    border: 1px solid #2a2a2a; /* border */
+    border-radius: 8px;
+}
+
+#panelTitle {
+    color: #eeeeee; /* ink */
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+#panelHelp {
+    color: #999999; /* muted */
+    background: transparent;
+    border: 1px solid #2a2a2a; /* border */
+    border-radius: 9px;
+    font-size: 9pt;
+    font-weight: bold;
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+}
+
+#panelHelp:hover {
+    color: #eeeeee; /* ink */
+    border-color: #999999; /* ink_dim */
+}
+
+#panelSubtitle {
+    color: #666666; /* muted */
+    font-size: 10pt;
+}
+
+#panelEmpty {
+    color: #666666; /* muted */
+}
+
+#panelStatus {
+    color: #666666; /* muted */
+}
+
+#panelStatus[state="error"] {
+    color: #d24a3a; /* alert */
+}
+
+/* TextView */
+#textValue {
+    color: #eeeeee; /* ink */
+}
+
+#goalHeading {
+    color: #eeeeee;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#goalAmount {
+    color: #eeeeee;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+/* AccentView. The number's size is set in code, to fit the panel's width. */
+#accentNumber {
+    color: #eeeeee; /* ink */
+    font-weight: bold;
+    font-family: "Roboto Mono";
+}
+
+#accentDescription {
+    color: #666666; /* muted */
+}
+
+/* Forms (FormView, ChoiceView) */
+#form {
+    background: transparent;
+    border: 1px solid #2a2a2a; /* border */
+    border-radius: 6px;
+}
+
+#form QLabel,
+#form QCheckBox {
+    color: #eeeeee; /* ink */
+}
+
+#form QComboBox,
+#form QLineEdit,
+#form QListWidget,
+#form QSpinBox,
+#form QDoubleSpinBox {
+    background: #0d0d0d; /* canvas */
+    color: #eeeeee; /* ink */
+    border: 1px solid #2a2a2a; /* border */
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+#form QPushButton {
+    background: #a88e1e; /* dull accent */
+    color: #0d0d0d; /* panel */
+    border: 1px solid #2a2a2a; /* border */
+    border-radius: 6px;
+    padding: 4px;
+}
+
+#form QPushButton:hover {
+    background: #e6c000; /* accent dim */
+}
+
+#form QPushButton:focus {
+    border: 1px solid #F9C322; /* accent */
+}
+
+#form QPushButton:disabled {
+    background: #2a2a2a; /* border */
+    color: #666666; /* muted */
+}
+
+#form QLineEdit:read-only {
+    color: #666666; /* muted */
+}
+
+/* The drop-down list is its own window, so it needs its own colours */
+#form QComboBox QAbstractItemView {
+    background: #0d0d0d; /* canvas */
+    color: #eeeeee; /* ink */
+    border: 1px solid #2a2a2a; /* border */
+    selection-background-color: #2a2a2a; /* border */
+    selection-color: #eeeeee; /* ink */
+}
+
+/* Dialogs, such as save errors. Without this they inherit light text from #form
+   onto a window drawn in the system's own colours. */
+QMessageBox {
+    background: #141414; /* panel */
+}
+
+QMessageBox QLabel {
+    color: #eeeeee; /* ink */
+}
+
+/* Scroll areas: #form is one (FormView).
+   Only the viewport and its content, so the scroll bars keep their own style. */
+#form QScrollArea,
+#form QWidget#qt_scrollarea_viewport,
+#form QWidget#qt_scrollarea_viewport > QWidget {
+    background: transparent;
+}
+
+/* Page scroll areas (MainWindow), one per tab: transparent, so the window
+   background shows through as it does when the page fits. The frame is
+   removed, so the page itself draws the edges. */
+#pageScroll,
+#pageScroll > QWidget#qt_scrollarea_viewport,
+#pageScroll > QWidget#qt_scrollarea_viewport > QWidget {
+    background: transparent;
+    border: none;
+}
+
+QTabWidget::pane {
+    border: none;
+}
+
+QTabBar::tab {
+    background: #141414;
+    color: #666666;
+    font-size: 11pt;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin: 2px;
+    font-family: "Roboto Mono";
+}
+
+QTabBar::tab:selected {
+    background: #141414;
+    color: #F9C322;
+    border-bottom: 2px solid #F9C322;
+}
+
+/* Spin box arrows */
+#form QAbstractSpinBox::up-button,
+#form QAbstractSpinBox::down-button {
+    background: transparent;
+    border: none;
+    width: 14px;
+}
+
+#form QAbstractSpinBox::up-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid #666666; /* muted */
+}
+
+#form QAbstractSpinBox::down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #666666; /* muted */
+}
+
+/* Scroll bars: no end buttons, so the handle has the whole track */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #2a2a2a; /* border */
+    border-radius: 4px;
+    min-height: 24px;
+    margin: 1px;
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:vertical:pressed {
+    background: #666666; /* muted */
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+    border: none;
+    background: none;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Settings navigation remains outside the selected section's scroll area. */
+#settingsNavigation {
+    background: #141414;
+    color: #eeeeee;
+    outline: 0;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 8px;
+}
+#settingsNavigation::item { padding: 10px 6px; border-radius: 4px; }
+#settingsNavigation::item:selected { background: #1a1a1a; color: #F9C322; }
+#settingsNavigation::item:focus { border: 1px solid #F9C322; }
+
+/* Optional configuration details are secondary to the simulation action. */
+#configDisclosure {
+    background: transparent;
+    color: #F9C322;
+    border: 1px solid transparent;
+    padding: 3px 0;
+    text-align: left;
+}
+#configDisclosure:hover { color: #eeeeee; }
+#configDisclosure:focus { border-color: #F9C322; }
+
+#replayTimeline::groove:horizontal {
+    height: 4px;
+    background: #2a2a2a;
+    border-radius: 2px;
+}
+#replayTimeline::sub-page:horizontal { background: #F9C322; border-radius: 2px; }
+#replayTimeline::handle:horizontal {
+    width: 12px;
+    margin: -5px 0;
+    background: #eeeeee;
+    border: 1px solid #666666;
+    border-radius: 6px;
+}
+#replayTimeline::handle:horizontal:focus { border: 2px solid #F9C322; }
