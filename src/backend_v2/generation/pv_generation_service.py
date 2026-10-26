@@ -143,6 +143,8 @@ class PvGenerationService:
         self, location: Location, house_config: HouseConfig, frame: pd.DataFrame
     ) -> pd.Series:
         """Run pvlib for one house and return AC power in kW."""
+        if house_config.pv_peak_capacity == 0:
+            return pd.Series(0.0, index=frame.index)
         frame = frame.rename(columns={"air_temperature": "temp_air"})
         pvlib_location = pvlib.location.Location(
             latitude=location.latitude,
